@@ -18,6 +18,20 @@ public class ConversationService {
     @Autowired ConversationRepository conversationRepository;
     @Autowired ProfilesRepository profilesRepository;
 
+    public ResponseEntity<Conversation> getUserConversation(String conversationId) {
+        try{
+            Conversation conversation = conversationRepository.findById(conversationId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unable to find conversation with id: " + conversationId));
+            return new ResponseEntity<>(conversation, HttpStatus.FOUND);
+        }
+        catch (ResponseStatusException e){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+        }
+
+
+
+    }
+
     public ResponseEntity<Conversation> createConversation(CreateConversationRequest conversationRequest){
         try {
             profilesRepository.findById(conversationRequest.profileId()).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND ,"Unable to find profile with "+ conversationRequest.profileId()));
@@ -45,8 +59,8 @@ public class ConversationService {
     public ResponseEntity<Conversation> addMessage(String conversationId, ChatMessages chatMessage){
         try{
             Conversation conversation = conversationRepository.findById(conversationId).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unable to find conversation with id: " + conversationId));
-            profilesRepository.findById(chatMessage.authorId()).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unable to find profile with "+ chatMessage.profileId()));
-            ChatMessages chatMessageswithTime= new ChatMessages(chatMessage.messageText() , conversation.profileId(), LocalDateTime.now());
+            profilesRepository.findById(chatMessage.authorId()).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Unable to find profile with "+ chatMessage.authorId()));
+            ChatMessages chatMessageswithTime= new ChatMessages(chatMessage.messageText() , chatMessage.authorId(), LocalDateTime.now());
             conversation.messages().add(chatMessageswithTime);
             conversationRepository.save(conversation);
             return new ResponseEntity<>(conversation, HttpStatus.CREATED);
