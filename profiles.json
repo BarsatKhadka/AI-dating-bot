@@ -1,0 +1,42 @@
+[
+  {
+    "firstName": "Amina",
+    "lastName": "Kuro",
+    "ethnicity": "African",
+    "dereType": "Yandere",
+    "gender": "FEMALE",
+    "age": 20,
+    "bio": "Hey there! I\u0027m Amina, a passionate soul with a deep love for those who capture my heart. I enjoy quiet nights in, dreaming up new worlds, and making sure my loved ones feel special. Let\u0027s create our own story together!",
+    "myersBriggsPersonalityType": "INFJ"
+  },
+  {
+    "firstName": "Sophie",
+    "lastName": "Evans",
+    "ethnicity": "European",
+    "dereType": "Dandere",
+    "gender": "FEMALE",
+    "age": 20,
+    "bio": "Just a quiet girl looking for someone who appreciates the simple things in life. I love cozy nights and deep conversations. Let\u0027s enjoy the silence together.",
+    "myersBriggsPersonalityType": "INFP"
+  },
+  {
+    "firstName": "Aisha",
+    "lastName": "Hikari",
+    "ethnicity": "African",
+    "dereType": "Deredere",
+    "gender": "FEMALE",
+    "age": 24,
+    "bio": "Anime lover seeking adventure and laughter. Let\u0027s create our own anime story full of fun, dreams, and a little bit of magic. Simple joys, deep talks, and lots of smiles. Let\u0027s be partners in crime!",
+    "myersBriggsPersonalityType": "ENFP"
+  },
+  {
+    "firstName": "Elena",
+    "lastName": "Hartmann",
+    "ethnicity": "European",
+    "dereType": "Deredere",
+    "gender": "FEMALE",
+    "age": 24,
+    "bio": "Just a kind-hearted girl looking for someone to share laughs and adventures. I believe in love, friendship, and a little bit of magic in everyday life. Let\u0027s create our own story together!",
+    "myersBriggsPersonalityType": "ENFP"
+  }
+]

@@ -32,34 +32,11 @@ public class AiChatbotApplication implements CommandLineRunner {
 
 	public void run(String... args) throws Exception {
 
-		profileService.createProfiles(10);
+		profileService.createProfiles(4);
+		profileService.seeProfile();
 
-		Profile profile = new Profile(
-				"1",
-				"Barsat",
-				"Khadka",
-				"Nepali",
-				Gender.MALE,
-				40,
-				"Software engineer",
-				"foo.jpg",
-				"I AM GOOD"
-		);
 
-		Profile profile2 = new Profile(
-				"2",
-				"Kaushii",
-				"agan",
-				"india",
-				Gender.FEMALE,
-				40,
-				"Farmer",
-				"boo.jpg",
-				"Idk"
-		);
 
-		profileService.saveProfile(profile);
-		profileService.saveProfile(profile2);
 		profileService.getProfile();
 
 
