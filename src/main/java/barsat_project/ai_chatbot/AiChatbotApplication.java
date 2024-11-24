@@ -7,6 +7,9 @@ import barsat_project.ai_chatbot.profiles.Gender;
 import barsat_project.ai_chatbot.profiles.Profile;
 import barsat_project.ai_chatbot.profiles.ProfileService;
 import barsat_project.ai_chatbot.profiles.ProfilesRepository;
+import org.springframework.ai.chat.model.ChatResponse;
+import org.springframework.ai.chat.prompt.Prompt;
+import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,11 +24,15 @@ public class AiChatbotApplication implements CommandLineRunner {
 	@Autowired
 	private ProfileService profileService;
 
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(AiChatbotApplication.class, args);
 	}
 
 	public void run(String... args) throws Exception {
+
+		profileService.createProfiles(10);
 
 		Profile profile = new Profile(
 				"1",
