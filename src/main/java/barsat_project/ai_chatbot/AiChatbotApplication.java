@@ -5,6 +5,7 @@ import barsat_project.ai_chatbot.conversations.Conversation;
 import barsat_project.ai_chatbot.conversations.ConversationRepository;
 import barsat_project.ai_chatbot.profiles.Gender;
 import barsat_project.ai_chatbot.profiles.Profile;
+import barsat_project.ai_chatbot.profiles.ProfileService;
 import barsat_project.ai_chatbot.profiles.ProfilesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -18,15 +19,14 @@ import java.util.List;
 public class AiChatbotApplication implements CommandLineRunner {
 
 	@Autowired
-	private ProfilesRepository profilesRepository;
-    @Autowired
-    private ConversationRepository conversationRepository;
+	private ProfileService profileService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(AiChatbotApplication.class, args);
 	}
 
 	public void run(String... args) throws Exception {
+
 		Profile profile = new Profile(
 				"1",
 				"Barsat",
@@ -38,18 +38,25 @@ public class AiChatbotApplication implements CommandLineRunner {
 				"foo.jpg",
 				"I AM GOOD"
 		);
-		profilesRepository.save(profile);
-		profilesRepository.findAll().forEach(System.out::println);
 
-		Conversation conversation = new Conversation(
-				"1",
-				profile.id(),
-				List.of(
-						new ChatMessages("Hey how are you", profile.id(), LocalDateTime.now())
-				)
+		Profile profile2 = new Profile(
+				"2",
+				"Kaushii",
+				"agan",
+				"india",
+				Gender.FEMALE,
+				40,
+				"Farmer",
+				"boo.jpg",
+				"Idk"
 		);
-		conversationRepository.save(conversation);
-		conversationRepository.findAll().forEach(System.out::println);
+
+		profileService.saveProfile(profile);
+		profileService.saveProfile(profile2);
+		profileService.getProfile();
+
+
+
 	}
 
 
