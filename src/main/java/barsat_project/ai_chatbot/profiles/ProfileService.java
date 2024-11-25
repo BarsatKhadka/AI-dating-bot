@@ -1,6 +1,7 @@
 package barsat_project.ai_chatbot.profiles;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.openai.OpenAiChatModel;
@@ -12,6 +13,7 @@ import org.springframework.context.annotation.Description;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -83,7 +85,7 @@ public class ProfileService {
 
             String prompt = "Create a Tinder profile for an anime waifu persona. This character is " + age + " " +
                     "years old, identifies as " + gender.toString() + ", and has an ethnicity of " + ethnicity + ". " +
-                    "They also have a " + dereType + " dere type. Please include their first name, last name, dere Type , Myers-Briggs Personality Type, and a short, engaging Tinder bio that is kind of human and simple (dont use flashy words)" +
+                    "They also have a " + dereType + " dere type. Please include their first name, last name, dere Type , Myers-Briggs Personality Type, and a short, engaging Tinder bio that matches to the dere type and kind of human and simple (dont use flashy words)" +
                     " that reflects their personality.";
 
             ChatResponse response = chatClient.call(new Prompt(prompt , OpenAiChatOptions.builder().withFunction("saveProfile").build()));
@@ -104,15 +106,21 @@ public class ProfileService {
     }
 
     public void saveProfiletoJson(List<Profile> generatedProfiles) {
-        String jsonString = new Gson().toJson(generatedProfiles);
+
 
         try{
+            Gson gson = new Gson();
+            List<Profile> existingProfiles = gson.fromJson(new FileReader(PROFILE_FILE_PATH), new TypeToken<ArrayList<Profile>>(){}.getType());
+            generatedProfiles.addAll(existingProfiles);
+            String jsonString = gson.toJson(generatedProfiles);
             FileWriter writer = new FileWriter(PROFILE_FILE_PATH);
             writer.write(jsonString);
             writer.close();
 
         }
-        catch(IOException e){}
+        catch(IOException e){
+            throw new RuntimeException(e.getMessage());
+        }
 
     }
 

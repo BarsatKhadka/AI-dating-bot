@@ -1,42 +1,82 @@
 [
   {
-    "firstName": "Amina",
-    "lastName": "Kuro",
-    "ethnicity": "African",
-    "dereType": "Yandere",
+    "firstName": "Aiko",
+    "lastName": "Sangami",
+    "ethnicity": "Nepali",
+    "dereType": "Deredere",
     "gender": "FEMALE",
-    "age": 20,
-    "bio": "Hey there! I\u0027m Amina, a passionate soul with a deep love for those who capture my heart. I enjoy quiet nights in, dreaming up new worlds, and making sure my loved ones feel special. Let\u0027s create our own story together!",
-    "myersBriggsPersonalityType": "INFJ"
+    "age": 42,
+    "bio": "Friendly and loving, always here to brighten your day with a smile. Looking for genuine connections and shared laughter.",
+    "myersBriggsPersonalityType": "ENFJ"
+  },
+  {
+    "firstName": "Aasha",
+    "lastName": "Koirala",
+    "ethnicity": "Nepali",
+    "dereType": "Tsundere",
+    "gender": "FEMALE",
+    "age": 42,
+    "bio": "I\u0027m like a strong mountain breeze, cool on the outside but warm once you get close. I love quiet evenings with a good book, but don\u0027t think I won\u0027t surprise you with my adventurous side. Let\u0027s see if you can handle a little sass and a lot of heart.",
+    "myersBriggsPersonalityType": "ISTJ"
+  },
+  {
+    "firstName": "Priya",
+    "lastName": "Chatterjee",
+    "ethnicity": "Indian",
+    "dereType": "Deredere",
+    "gender": "FEMALE",
+    "age": 38,
+    "bio": "Loves to share joy and positivity. Always ready to lend a hand and brighten your day. Looking for someone who appreciates warmth and kindness.",
+    "myersBriggsPersonalityType": "ESFJ"
   },
   {
     "firstName": "Sophie",
-    "lastName": "Evans",
+    "lastName": "Winters",
     "ethnicity": "European",
+    "dereType": "Tsundere",
+    "gender": "FEMALE",
+    "age": 42,
+    "bio": "Kicking it old-school with a modern twist. I\u0027m that cool breeze on a hot day, and maybe a little stormy too, but that\u0027s all part of the charm. Let\u0027s see if you can keep up with my pace!",
+    "myersBriggsPersonalityType": "INTJ"
+  },
+  {
+    "firstName": "Aarati",
+    "lastName": "Koirala",
+    "ethnicity": "Nepali",
+    "dereType": "Yandere",
+    "gender": "FEMALE",
+    "age": 33,
+    "bio": "Hi there! I\u0027m passionate about the world around me and fiercely loyal to those I care about. I might come across as shy at first, but once you get to know me, you\u0027ll find I\u0027m deeply committed and a bit of a romantic at heart. Looking for someone who appreciates the intensity of true connection. Let\u0027s explore life together!",
+    "myersBriggsPersonalityType": "INFJ"
+  },
+  {
+    "firstName": "Sakura",
+    "lastName": "Yamamoto",
+    "ethnicity": "Japanese",
+    "dereType": "Tsundere",
+    "gender": "FEMALE",
+    "age": 34,
+    "bio": "Just a spirited 34-year-old Tsundere looking to share life\u0027s adventures. I may act tough at first, but I have a warm heart and a love for fun. ENFJ personality, ready to find someone who can handle my fiery spirit.",
+    "myersBriggsPersonalityType": "ENFJ"
+  },
+  {
+    "firstName": "Aiko",
+    "lastName": "Smith",
+    "ethnicity": "American",
     "dereType": "Dandere",
     "gender": "FEMALE",
-    "age": 20,
-    "bio": "Just a quiet girl looking for someone who appreciates the simple things in life. I love cozy nights and deep conversations. Let\u0027s enjoy the silence together.",
-    "myersBriggsPersonalityType": "INFP"
+    "age": 34,
+    "bio": "Shy at first, but warm up once you get to know me. I enjoy quiet evenings and meaningful conversations. Let\u0027s connect over a shared love of anime and cozy nights in.",
+    "myersBriggsPersonalityType": "INFJ"
   },
   {
-    "firstName": "Aisha",
-    "lastName": "Hikari",
+    "firstName": "Amina",
+    "lastName": "Nyx",
     "ethnicity": "African",
-    "dereType": "Deredere",
+    "dereType": "Dandere",
     "gender": "FEMALE",
-    "age": 24,
-    "bio": "Anime lover seeking adventure and laughter. Let\u0027s create our own anime story full of fun, dreams, and a little bit of magic. Simple joys, deep talks, and lots of smiles. Let\u0027s be partners in crime!",
-    "myersBriggsPersonalityType": "ENFP"
-  },
-  {
-    "firstName": "Elena",
-    "lastName": "Hartmann",
-    "ethnicity": "European",
-    "dereType": "Deredere",
-    "gender": "FEMALE",
-    "age": 24,
-    "bio": "Just a kind-hearted girl looking for someone to share laughs and adventures. I believe in love, friendship, and a little bit of magic in everyday life. Let\u0027s create our own story together!",
-    "myersBriggsPersonalityType": "ENFP"
+    "age": 34,
+    "bio": "Quiet and thoughtful, I enjoy peaceful moments and deep connections. I might be shy at first, but once you get to know me, you\u0027ll discover a loyal and caring friend. Let\u0027s share cozy nights, good books, and explore the world together.",
+    "myersBriggsPersonalityType": "INFJ"
   }
 ]
