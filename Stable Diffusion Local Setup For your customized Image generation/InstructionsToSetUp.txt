@@ -1,0 +1,61 @@
+﻿Running Stable Diffusion Locally for Anime-Themed Chatbot
+By Barsat Khadka
+Recommended only for systems with a dedicated GPU (preferably NVIDIA).
+________________
+
+
+1. Python Version Requirement
+Ensure that Python 3.10 is installed on your system.
+* If not, uninstall your current Python version and install Python 3.10.
+________________
+
+
+2. For Intel GPUs or Low-Performance GPUs
+If your system uses an Intel GPU or a less capable GPU, you’ll need OpenVINO.
+Steps to Install OpenVINO:
+1. Visit the OpenVINO Build Guide.
+2. Choose your operating system and follow the detailed build instructions.
+Note: The process can be time-consuming. Be patient!
+________________
+
+
+3. Setting Up Stable Diffusion
+   1. Go to Stable Diffusion WebUI.
+   2. Follow the installation instructions for your operating system.
+After Cloning the Repository:
+   * Navigate to the models folder.
+   * Inside models, go to the Stable-diffusion subfolder.
+Download a Model:
+   * Visit platforms like Hugging Face or other model providers, or use your own model.
+   * Place the downloaded model file into the Stable-diffusion folder.
+________________
+
+
+4. Editing webui-user.sh (You can download my file or do it yourself following the repo’s instructions)
+For Intel GPUs:
+   * You might need to add flags like --skip-cuda-test if prompted by the terminal.
+For NVIDIA GPUs:
+   * Add the following line to webui-user.sh:
+export COMMAND_LINE_ARGS="--api --share" and that;s enough.
+
+______________
+
+5. Running the WebUI
+Run the following command in the terminal:
+Inside the folder where webUI is ./webui.sh
+~The script might take some time to initialize.
+~Once complete, a link will be generated in the terminal.
+~Copy and paste this link into your browser to access Stable Diffusion.
+
+
+. Troubleshooting
+      * If the terminal prompts for specific flags (e.g., --skip-cuda-test):
+      1. Open webui-user.sh again.
+      2. Modify the export line to include the required flags.
+________________
+
+
+Helpful Tips
+      1. Use AI Tools: ChatGPT and other AI tools can assist with prompts or troubleshooting.
+      2. Read Documentation Carefully:
+Don’t skip the README files on GitHub—they often contain vital details!
