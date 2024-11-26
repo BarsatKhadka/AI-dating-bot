@@ -13,14 +13,14 @@ ________________
 2. For Intel GPUs or Low-Performance GPUs
 If your system uses an Intel GPU or a less capable GPU, you’ll need OpenVINO.
 Steps to Install OpenVINO:
-1. Visit the OpenVINO Build Guide.
+1. Visit the OpenVINO Build Guide. (https://github.com/openvinotoolkit/stable-diffusion-webui/wiki/Installation-on-Intel-Silicon) - installation process at end of page.
 2. Choose your operating system and follow the detailed build instructions.
 Note: The process can be time-consuming. Be patient!
 ________________
 
 
 3. Setting Up Stable Diffusion
-   1. Go to Stable Diffusion WebUI.
+   1. Go to Stable Diffusion WebUI. (https://github.com/AUTOMATIC1111/stable-diffusion-webui?tab=readme-ov-file#installation-and-running) 
    2. Follow the installation instructions for your operating system.
 After Cloning the Repository:
    * Navigate to the models folder.
@@ -31,7 +31,7 @@ Download a Model:
 ________________
 
 
-4. Editing webui-user.sh (You can download my file or do it yourself following the repo’s instructions)
+4. Editing webui-user.sh (You can download my file or do it yourself following the repo’s instructions)  
 For Intel GPUs:
    * You might need to add flags like --skip-cuda-test if prompted by the terminal.
 For NVIDIA GPUs:
